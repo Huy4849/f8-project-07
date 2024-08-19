@@ -1,0 +1,106 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin-top: 60px;
+    width: inherit;
+
+    &__group{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
+        height: 50px;
+        padding: 0 12px;
+        border-radius: 10px;
+        border: 1px solid var(--form-color);
+
+        &-input{
+            flex: 1;
+            height: 100%;
+            color: var(--form-input-color);
+
+            &::placeholder{
+                color: var(--form-placeholder-color);
+            }
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &-icon{
+            filter: var(--form-icon-color);
+        }
+
+        &-inner{
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            user-select: none;
+
+            &::before, &::after{
+                position: absolute;
+                left: 0;
+            }
+
+            &::before{
+                content: "";
+                width: 19px;
+                height: 19px;
+                border: 1px solid #9E9DA8;
+                border-radius: 5px;
+            }
+        }
+
+        &-inner:has(:checked){
+            &::before{
+                background-color: #FFB700;
+                border: #FFB700;
+            }
+
+            &::after{
+                content: "";
+                left: 2px;
+                top: 4px;
+                width: 15px;
+                height: 8px;
+                border: 2px solid;
+                border-color: transparent transparent #FFF #FFF;
+                rotate: -45deg;
+            }
+        }
+
+        &-label{
+            margin-left: 29px;
+            color: var(--form-color);
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &-link{
+            color: #0071DC;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &-btn{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__active{
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        border: none;
+        height: initial;
+    }
+}

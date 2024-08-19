@@ -1,0 +1,17 @@
+.search{
+    height: 50px;
+    padding: 0 15px;
+
+    background-color: var(--product-info-color);
+    border-radius: 10px;
+
+    &-input{
+        flex: 1;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+
+        padding-right: 15px;
+
+        color: var(--text-color);
+    }
+}

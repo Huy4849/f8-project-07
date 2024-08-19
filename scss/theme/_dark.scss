@@ -1,0 +1,81 @@
+@use "../abstract";
+
+html.dark{
+    --text-color: #FFF;
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(24%) saturate(2%) hue-rotate(27deg) brightness(112%) contrast(101%);
+
+    --header-bg-color: #171C28;
+    --header-2-color: #292E39;
+
+    --body-color: #292E39;
+
+    --header-2-separate: #EDEDF6;
+
+    --header-2-shadow: rgba(237, 237, 246, 0.20);
+    
+    // dropdown
+    --dropdown-bg-color: #292E39;
+    --dropdown-main-color: #B9BABE;
+    --dropdown-polygon: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
+    --dropdown-shadow: rgba(23, 28, 40, 0.40);
+    --dropdown-icon-color: brightness(0) saturate(100%) invert(88%) sepia(1%) saturate(222%) hue-rotate(204deg) brightness(113%) contrast(97%);;
+    --border-bg-color: #171C28;
+
+    // sidebar
+    --sidebar-bg-color: #292E39;
+    --sidebar-icon-color: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(118%) hue-rotate(191deg) brightness(90%) contrast(85%);
+
+    // Browse Categories
+    --cate-bg-img:#292E39;
+    --cate-price-color: #FFF;
+    --cate-bg-color:#171C28;
+    --cate-bg-color-md: #171C28;
+
+    // product
+    --product-bg-color: #171C28;
+
+    // filter
+    --filter-bg-color: #292E39;
+    --filter-color-shadow: rgba(0, 0, 0, 0.40);
+    --filter-tag-color: #292E39;
+
+    // button
+    --filter-bt-color: #171C28;
+    --filter-color-text: #D2D1D6;
+    --filter-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(9%) saturate(1112%) hue-rotate(183deg) brightness(98%) contrast(94%);
+
+    // auth
+    --auth-right-color: #171C28;
+    --auth-left-color: #292E39;
+
+    // form
+    --form-heading-color: #B9BABE;
+    --form-placeholder-color: #B9BABE;
+    --form-color: #9E9DA8;
+    --form-outline-color: #B9BABE;
+    --form-icon-color: brightness(0) saturate(100%) invert(83%) sepia(5%) saturate(163%) hue-rotate(191deg) brightness(92%) contrast(85%);
+    --form-input-color: #FFF;
+    --form-icon-btn: brightness(0) saturate(100%) invert(81%) sepia(4%) saturate(197%) hue-rotate(191deg) brightness(93%) contrast(88%);
+
+    // product
+    --product-bg-color: #292E39;
+    --product-info-color: #171C28;
+    --product-text-color: #EEE;
+
+    @include abstract.screen(md){
+        --product-color: #292E39;
+    }
+    
+    // breadcrumbs
+    --product-shadow-color: rgba(23, 28, 40, 0.20);
+
+    // search
+    --search-placeholder-color: #B9BABE;
+
+    // review
+    --review-bg-color: #171C28;
+
+    // act
+    --act-ft-color: brightness(0) saturate(100%) invert(9%) sepia(13%) saturate(2745%) hue-rotate(210deg) brightness(90%) contrast(96%);
+    --act-bg-color: #171C28;
+}

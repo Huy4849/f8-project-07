@@ -1,0 +1,137 @@
+@use "../abstract";
+.footer{
+    padding: 30px 0;
+
+    background: var(--header-bg-color);
+
+    &__content{
+        margin: 30px 0;
+        line-height: 1.5;
+    }
+
+    &__text{
+        line-height: 1.4;
+    }
+
+    &__form{  
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include abstract.screen(xl){
+            flex-direction: column;
+        }
+
+        @include abstract.screen(lg){
+            flex-direction: row;
+        }
+        
+        margin-top: 16px;
+
+        &-input{
+            width: 100%;
+            padding: 0 12px;
+            height: 42px;
+            border-radius: 6px;
+            border: 2px solid #d2d1d6;
+
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            @include abstract.screen(lg){
+                width: initial;
+            }
+        }
+    }
+
+    &__heading{
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+
+    &__list{
+        margin-top: 20px;
+
+        &-item{
+            padding: 8px 0;
+            line-height: 1.4;
+        }
+    }
+
+    &__group{
+        margin-top: 20px;
+
+        &-link, &-address, &-time{
+            display: block;
+
+            padding: 8px 0;
+        }
+
+        &-address{
+            line-height: 1.5;
+        }
+    }
+
+    &__bottom{
+        margin-top: 50px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include abstract.screen(lg){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        width: 312.5px;
+
+        @include abstract.screen(lg){
+            width: initial;
+        }
+
+        &-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+
+        &-img:first-child{
+            background-color: #4863a9;
+        }
+
+        &-img:nth-child(2){
+            background-color: #f00;
+        }
+
+        &-img:nth-child(3){
+            background-color: #2f71ab;
+        }
+
+        &-img:nth-child(4){
+            background-color: #000;
+        }
+
+        &-img:nth-child(5){
+            background-color: #4999e6;
+        }
+
+        &-img__icon{
+            width: 14px;
+
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+        }
+    }
+}
+

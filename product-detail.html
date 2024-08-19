@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grocerymart</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+    <!-- sass -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- js -->
+    <script src="./assets/js/script.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header id="header" class="header"></header>
+        <script>
+            load("#header", "./template/header-logined.html");
+        </script>
+
+    <main class="product">
+        <div class="container">
+            <div class="product__page">
+                <div class="search d-none d-md-flex">
+                    <input type="text" placeholder="Search for item" class="search-input">
+
+                    <button class="search-btn">
+                        <img src="./assets/icons/search.svg" alt="" class="icon">
+                    </button>
+                </div>
+
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Departments    
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__link-icon">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__link-icon">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee Beans  
+                                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__link-icon">
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link-current">
+                                LavAzza
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__page product__content">
+                <div class="row">
+                    <div class="col-5 col-lg-12">
+                        <div class="product__preview">
+                            <div class="product__preview-list">
+                                <div class="product__preview-item">
+                                    <img src="./assets/img/product-item/product-item-1.png" alt="" class="product__preview-img">
+                                </div>
+    
+                                <div class="product__preview-item">
+                                    <img src="./assets/img/product-item/product-item-2.png" alt="" class="product__preview-img">
+                                </div>
+    
+                                <div class="product__preview-item">
+                                    <img src="./assets/img/product-item/product-item-3.png" alt="" class="product__preview-img">
+                                </div>
+    
+                                <div class="product__preview-item">
+                                    <img src="./assets/img/product-item/product-item-4.png" alt="" class="product__preview-img">
+                                </div>
+                            </div>
+
+                            <div class="product__preview-thumb">
+                                <img src="./assets/img/product-item/product-item-1.png" alt="" class="product__preview-thumb__img product__preview-thumb__current">
+                                <img src="./assets/img/product-item/product-item-2.png" alt="" class="product__preview-thumb__img">
+                                <img src="./assets/img/product-item/product-item-3.png" alt="" class="product__preview-thumb__img">
+                                <img src="./assets/img/product-item/product-item-4.png" alt="" class="product__preview-thumb__img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-7 col-lg-12">
+                        <div class="product__info">
+                            <h3 class="product__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h3>
+
+                            <div class="product__row">
+                                <div class="product__column">
+                                    <div class="product__inner">
+                                        <img src="./assets/icons/star.svg" alt="" class="product__inner-icon">
+
+                                        <div class="product__inner-desc">(3.5) 1100 reviews</div>
+                                    </div>
+
+                                    <div class="filter__item">
+                                        <form action="" class="filter__form">
+                                            <label for="" class="filter__form-label">Size/Weight</label>
+        
+                                            <div class="filter__form-row filter__form-row__small">
+                                                <div class="filter__form-row__col filter__form-row__col-small" style="--width: 129px">
+                                                    <div class="filter__form-row__label">500g</div>
+        
+                                                    <img src="./assets/icons/filter-arrow.svg" alt="" class="filter__form-row-icon icon">
+                                                </div>
+        
+                                                <div class="filter__form-row__separate"></div>
+        
+                                                <div class="filter__form-row__col filter__form-row__col-small">
+                                                    <div class="filter__form-row__label">Gram</div>
+        
+                                                    <img src="./assets/icons/filter-arrow.svg" alt="" class="filter__form-row-icon icon">
+                                                </div>
+                                            </div>
+        
+                                            <div class="filter__form-tags">
+                                                <div class="filter__form-tag">Small</div>
+                                                <div class="filter__form-tag">Medium</div>
+                                                <div class="filter__form-tag">Large</div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="product__column product-column">
+                                    <div class="product__inner">
+                                        <img src="./assets/icons/document-1.svg" alt="" class="product__inner-icon icon">
+
+                                        <div class="product__inner-desc">Compare</div>
+                                    </div>
+
+                                    <div class="product__inner">
+                                        <img src="./assets/icons/buy.svg" alt="" class="product__inner-icon icon">
+
+                                        <div class="product__inner-group">
+                                            <div class="product__inner-desc">Delivery</div>
+
+                                            <p class="product__inner-text">From $6 for 1-3 days</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__inner">
+                                        <img src="./assets/icons/bag.svg" alt="" class="product__inner-icon icon">
+
+                                        <div class="product__inner-group">
+                                            <div class="product__inner-desc">Pickup</div>
+
+                                            <p class="product__inner-text">Out of 2 store, today</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product__cart">
+                                        <div class="product__cart-group">
+                                            <div class="product__cart-price">$500.00</div>
+
+                                            <div class="product__cart-stats">10%</div>
+                                        </div>
+
+                                        <div class="product__cart-text">$540.00</div>
+
+                                        <div class="product__btn">
+                                            <button class="btn btn__primary btn__product">Add to cart</button>
+
+                                            <button class="like-btn like-btn__product">
+                                                <img src="./assets/icons/heart.svg" alt="" class="like-btn-icon icon">
+
+                                                <img src="./assets/icons/heart-red.svg like-btn__product" alt="" class="like-btn__heart-icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__page">
+                <div class="product__tab js-tabs">
+                    <ul class="product__tab-list">
+                        <li class="product__tab-item">Description</li>
+                        <li class="product__tab-item">Features  </li>
+                        <li class="product__tab-item product__tab-current">Review (1100)</li>
+                        <li class="product__tab-item product__tab-hidden">Similar</li>
+                    </ul>
+
+                    <div class="product__tab-review">
+                        <h2 class="product__tab-heading">What our customers are saying</h2>
+
+                        <div class="row row-cols-3 row-cols-md-1 gy-md-3">
+                            <div class="column">
+                                <div class="review">
+                                    <div class="review__inner">
+                                        <img src="./assets/img/product-detail/avatar-1.svg" alt="" class="review__img">
+
+                                        <div class="review__content">
+                                            <div class="review__name">Jakir Hussen</div>
+
+                                            <div class="review__desc">Great product, I love this Coffee Beans </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__group">
+                                        <div class="review__thumb">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-half.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-blank.svg" alt="" class="review__icon">
+                                        </div>
+
+                                        <div class="review__text">(3.5) Review</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="review">
+                                    <div class="review__inner">
+                                        <img src="./assets/img/product-detail/avatar-2.svg" alt="" class="review__img">
+
+                                        <div class="review__content">
+                                            <div class="review__name">Jubed Ahmed</div>
+
+                                            <div class="review__desc">Awesome Coffee, I love this Coffee Beans </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__group">
+                                        <div class="review__thumb">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-half.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-blank.svg" alt="" class="review__icon">
+                                        </div>
+
+                                        <div class="review__text">(3.5) Review</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div class="review">
+                                    <div class="review__inner">
+                                        <img src="./assets/img/product-detail/avatar-3.svg" alt="" class="review__img">
+
+                                        <div class="review__content">
+                                            <div class="review__name">Delwar Hussain</div>
+
+                                            <div class="review__desc">Great product, I like this Coffee Beans </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review__group">
+                                        <div class="review__thumb">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-half.svg" alt="" class="review__icon">
+                                            <img src="./assets/icons/star-blank.svg" alt="" class="review__icon">
+                                        </div>
+
+                                        <div class="review__text">(3.5) Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+
+    <script>
+        load("#footer", "./template/footer.html");
+    </script>
+</body>
+</html>

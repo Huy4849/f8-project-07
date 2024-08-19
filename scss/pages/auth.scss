@@ -1,0 +1,132 @@
+@use "../abstract";
+.auth{
+    display: flex;
+    text-align: center;
+
+    min-height: 100vh;
+
+    &__right, &__left{
+        flex: 1;
+    }
+
+    &__right{
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        padding: 0 30px;
+
+        background-color: var(--auth-right-color);
+
+        &-logo, &-btn{
+            position: absolute;
+        }
+
+        &-img{
+            max-width: 100%;
+        }
+
+        &-desc{
+            width: min(412px, 100%);
+            
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            color: var(--form-heading-color);
+        }
+
+        &-logo{
+            top: 80px;
+        }
+
+        &-btn{
+            bottom: 50px;
+        }
+    }
+
+    &__left{
+        display: flex;
+        justify-content: center;
+        padding: 0 30px;
+
+        background-color: var(--auth-left-color);
+
+        @include abstract.screen(md){
+            position: fixed;
+            inset: 0;
+            translate: 100%;
+            overflow-y: auto;
+            z-index: 1;
+            transition: 0.5s;
+
+            &.show{
+                translate: 0;
+            }
+        }
+
+        &-title{
+            color: var(--form-heading-color);
+        }
+
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: min(460px, 100%);
+            padding: 50px 0;
+        }
+
+        &-heading{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            margin-top: 50px;
+
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &-desc{
+            padding: 0 20px;
+
+            color: #9E9DA8;
+
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%
+        }
+
+        &-group{
+            margin-top: 108px;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-text{
+            color: var(--form-color);
+
+            font-size: 1.8rem;
+            line-height: 144.444% ;
+        }
+
+        &-link{
+            color: #0071DC;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+    }
+
+
+}

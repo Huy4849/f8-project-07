@@ -1,0 +1,249 @@
+@use "../abstract";
+
+.header{
+    background-color: var(--header-bg-color);
+}
+
+%flexItemCenter{
+    display: flex;
+    align-items: center;
+}
+
+.top-bar{
+    @extend %flexItemCenter;
+    position: relative;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    &__document{
+        display: none;
+
+        @include abstract.screen(lg){
+            display: block;
+        }
+    }
+}
+
+.header-1{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    margin-left: 144px;
+
+    @include abstract.screen(xl){
+        margin-left: 40px;
+    }
+
+    @include abstract.screen(lg){
+        position: fixed;
+        inset: 0 50% 0 0;
+        background-color: var(--sidebar-bg-color);
+        z-index: 9;
+        margin-left: 0;
+        translate: -100%;
+        transition: translate 0.5s;
+        color: var(--dropdown-main-color);
+
+
+        &.show{
+            translate: 0;
+        }
+
+        &.show ~ &__overlay{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .icon{
+            filter: var(--sidebar-icon-color);
+        }
+    }
+
+    &__close-btn{
+        display: none;
+    }
+
+    @include abstract.screen(lg){
+        &__close-btn{
+            display: block;
+            padding: 40px 40px 10px 40px;
+        }
+    }
+
+    @include abstract.screen(sm){
+        inset: 0 20% 0 0;
+
+        &__close-btn{
+            display: block;
+            padding: 20px 40px 10px 20px;
+        }
+    }
+
+    &__overlay{
+        visibility: hidden;
+        opacity: 0;
+        transition:0.5s;
+
+        @include abstract.screen(lg){
+            position: fixed;
+            inset: 0;
+            background-color: rgba(#000, 0.4);
+            z-index: 8;
+        }
+    }
+
+    &__list{
+        display: flex;
+        gap: 30px;
+
+        @include abstract.screen(lg){
+            display: block;
+            height: calc(100% - 76px);
+            overflow-y: auto;
+        }
+
+        @include abstract.screen(md){
+            display: block;
+            height: calc(100% - 177px);
+            overflow-y: auto;
+        }
+
+        @include abstract.screen(sm){
+            display: block;
+            height: calc(100% - 155px);
+            overflow-y: auto;
+        }
+    }
+
+    &__item{
+        @extend %flexItemCenter;
+        gap: 6px;
+        height: 50px;
+        font-family: Gordita;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstract.screen(lg){
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        @include abstract.screen(sm){
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 44px;
+        }
+    }
+
+    li:hover > &__item ~ .dropdown{
+        display: block;
+    }
+
+    &__arrow{
+        margin-top: 3px;
+
+        @include abstract.screen(lg){
+            rotate: -90deg;
+            transition: 0.5s;
+        }
+    }
+
+    &__group{
+        @include abstract.screen(md){
+            padding: 0 40px;
+            align-items: center;
+            height: 50px;
+        }
+
+        @include abstract.screen(sm){
+            padding: 0 20px;
+            align-items: center;
+            height: 44px;
+        }
+
+        &-title{
+            margin-left: 16px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667% ;
+        }
+
+        &-text{
+            @extend .navbar__group-title;
+            margin-left: auto;
+        }
+    }
+}
+
+.header-2{
+    @extend %flexItemCenter;
+    gap: 20px;
+
+    &__heart, &__search, &__buy{
+        width: 24px;
+        height: 24px;
+        padding: 3.25px 2.75px 2.709px 2.75px;
+    }
+
+    &__inner{
+        @include abstract.screen(lg){
+            display: none;
+        }
+
+        padding: 12px 13px;
+        border-radius: 8px;
+        background: var(--header-2-color);
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+        cursor: pointer;
+    }
+
+    &__group{
+        @extend %flexItemCenter;
+        gap: 20px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: var(--header-2-color);
+        box-shadow: 0px 20px 60px 10px var(--header-2-shadow);
+        cursor: pointer;
+
+        @include abstract.screen(md){
+            display: none;
+        }
+    }
+
+    &__text{
+        font-family: Gordita;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__love, &__card{
+        display: flex;
+        gap: 10px;
+    }
+
+    &__card{
+        .show{
+            display: block;
+        }
+    }
+
+    &__separate{
+        width: 1px;
+        height: 30px;   
+        background-color: var(--header-2-separate);
+    }
+
+    &__avatar{
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

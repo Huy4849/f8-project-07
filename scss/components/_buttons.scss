@@ -1,0 +1,150 @@
+@use "../abstract";
+.filter-btn{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: var(--filter-bt-color);
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 6px;
+
+    &__text{
+        color: var(--filter-color-text);
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 142.857%;
+    }
+}
+
+.like-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.20);
+
+    &__heart-icon{
+        margin-top: 6px;
+    }
+
+    &:not(&__heart) &__heart-icon{
+        display: none;
+    }
+
+    &__heart &__icon{
+        display: none;
+    }
+
+    &__product{
+        border-radius: 6px;
+        border: 1px solid #D2D1D6;
+    }
+}
+
+// buttons
+.btn{
+    display: flex;
+    align-items: center;
+
+    height: 42px;
+    padding: 0 20px;
+    border-radius: 6px;
+
+    font-size: 1.8rem;
+    font-weight: 500; 
+
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        height: 40px;
+        line-height: 146.667%;
+
+        color: #9E9DA8;
+    }
+
+    &__primary{
+        color: #1A162E;
+        background: #FFB700;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        height: 40px;
+        line-height: 142.857%;
+    }
+
+    &__outline{
+        border-radius: 10px;
+        border: 1px solid #D2D1D6;
+    }
+
+    &__footer{
+        background: #FFB700;
+
+        @include abstract.screen(xl){
+            display: flex;
+            justify-content: center;
+
+            width: 100%;
+        }
+
+        @include abstract.screen(lg){
+            width: initial;
+        }
+    }
+
+    &__auth{
+        justify-content: center;
+        gap: 10px;
+
+        width: 100%;
+        height: 50px;
+
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__action{
+        color: var(--form-heading-color);
+    }
+
+    &-icon{
+        filter: var(--form-icon-btn);
+    }
+
+    &__product{
+        height: 46px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        white-space: nowrap;
+    }
+
+    &__act{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 250px;
+        height: 50px;
+        border-radius: 99px;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        user-select: none;
+        cursor: pointer;
+    }
+}

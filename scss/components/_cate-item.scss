@@ -1,0 +1,61 @@
+@use "../abstract";
+// cate
+.cate{
+    --grid-gutter-x: 51px;
+
+    @include abstract.screen(md){
+        --grid-gutter-y: 20px;
+    }
+}
+
+.cate__item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 26px;
+    border-radius: 16px;
+    background: var(--cate-bg-color);
+    height: 100%;
+
+    @include abstract.screen(xl){
+        flex-direction: column;
+    }
+
+    @include abstract.screen(md){
+        flex-direction: row;
+        background: var(--cate-bg-color-md);
+    }
+
+    &-thumb{
+        width: 116px;
+        height: 116px;
+        background: var(--cate-bg-img);
+        border-radius: 8px;
+
+        @include abstract.screen(md){
+            background: var(--cate-bg-img);
+        }
+    }
+
+    &-content{
+        padding-right: 30px;
+
+        @include abstract.screen(xxl){
+            padding: 0;
+        }
+    }
+
+    &-price{
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+        color: var(--cate-price-color);
+    }
+
+    &-text{
+        margin-top: 6px;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: var(--text-color);
+    }
+}
